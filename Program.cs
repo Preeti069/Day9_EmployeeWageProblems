@@ -6,15 +6,10 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            EmpWageBuilder dmart = new EmpWageBuilder("Dmart", 10, 4, 20);
-            dmart.WagesMonth();
-
-            Console.WriteLine(dmart.tostring());
-
-            EmpWageBuilder reliance = new EmpWageBuilder("Reliance", 10, 4, 20);
-            reliance.WagesMonth();
-
-            Console.WriteLine(reliance.tostring());
+            EmpWageBuilderArray empWageBuilderArray = new EmpWageBuilderArray();
+            empWageBuilderArray.addCompanyEmpWage("Dmart", 20, 2, 10);
+            empWageBuilderArray.addCompanyEmpWage("reliance", 10, 4, 20);
+            empWageBuilderArray.computeEmpWage();
         }
     }
 }
