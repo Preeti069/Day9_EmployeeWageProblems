@@ -8,7 +8,7 @@ namespace EmployeeWage
         {
            
             Employee emp = new Employee();
-            emp.Wage();
+            emp.PartTTime();
         }
     }
 }
