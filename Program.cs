@@ -6,10 +6,9 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welocome to Employee Wage Computation Program");
-
-            //CheckAttedance emplayee = new CheckAttedance();
-            //emplayee.Attendence();
+           
+            CheckAttedance emplayee = new CheckAttedance();
+            emplayee.Attendence();
         }
     }
 }
