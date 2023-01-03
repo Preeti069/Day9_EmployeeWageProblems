@@ -6,9 +6,15 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            ComputeEmployeeWage computeEmpWage = new ComputeEmployeeWage();
-            computeEmpWage.WagesMonth("dmart", 20, 3, 10);
-            computeEmpWage.WagesMonth("Reliance", 10, 4, 20);
+            EmpWageBuilder dmart = new EmpWageBuilder("Dmart", 10, 4, 20);
+            dmart.WagesMonth();
+
+            Console.WriteLine(dmart.tostring());
+
+            EmpWageBuilder reliance = new EmpWageBuilder("Reliance", 10, 4, 20);
+            reliance.WagesMonth();
+
+            Console.WriteLine(reliance.tostring());
         }
     }
 }
