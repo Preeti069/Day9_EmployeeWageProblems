@@ -7,7 +7,7 @@ namespace EmployeeWage
         static void Main(string[] args)
         {          
             Employee emp = new Employee();
-            emp.SwitchCase();
+            emp.WagesMonth();
         }
     }
 }
