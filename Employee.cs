@@ -12,14 +12,18 @@ namespace EmployeeWages
         public const int IS_PART_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
         public const int NUM_OF_WORKING_DAYS = 20;
+        public const int NUM_OF_WORKING_HOUR = 100;
         public void WagesMonth()
         {
             int empHrs = 0;
             int empWage = 0;
             int totalEmpWage = 0;
+            int totalEmpHour = 0;
+            int totalWorkingDay = 0;
 
-            for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
+            while (totalEmpHour < NUM_OF_WORKING_HOUR && totalWorkingDay < NUM_OF_WORKING_DAYS)
             {
+                totalWorkingDay++;
                 Random random = new Random();
                 int empCheck = random.Next(3);
 
@@ -29,14 +33,13 @@ namespace EmployeeWages
                     case IS_PART_TIME: empHrs = 4; break;
 
                     default: empHrs = 0; break;
-
                 }
 
                 empWage = empHrs * EMP_RATE_PER_HOUR;
                 Console.WriteLine(": " + empWage);
                 totalEmpWage += empWage;
             }
-            Console.WriteLine("total employee wage: " + totalEmpWage);
+            Console.WriteLine("total employee wage:" + totalEmpWage);
         }
     }
 }
