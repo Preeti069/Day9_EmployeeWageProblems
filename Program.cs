@@ -7,8 +7,8 @@ namespace EmployeeWage
         static void Main(string[] args)
         {
            
-            CheckAttedance emplayee = new CheckAttedance();
-            emplayee.Attendence();
+            Employee emp = new Employee();
+            emp.Wage();
         }
     }
 }
